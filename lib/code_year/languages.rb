@@ -37,6 +37,7 @@ module CodeYear
     'php',
     'picolisp',
     'pl/sql',
+    'postscript',
     'processing',
     'prolog',
     'python',

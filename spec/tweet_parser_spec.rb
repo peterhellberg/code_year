@@ -40,15 +40,12 @@ describe TweetParser do
         ['#java #clojure #golang #scala #python #bpel (0.o) #code2011', 6, 'go'],
         ['Io, Mana, PicoLisp, Prolog, C #code2011', 5, 'picolisp'],
         ['Ruby, Python, Javascript, Coffeescript, Processing, PostScript, ' +
-         'Lua, BASH, Haskell, C#, VBScript, Clojure,  Boo, and PHP #code2011', 13, 'boo'],
+         'Lua, BASH, Haskell, C#, VBScript, Clojure,  Boo, and PHP #code2011', 14, 'boo'],
         ['I suppose I could add elisp (thank you Emacs) and bash ' +
          '#code2011 + played with the "seven languages"', 2, 'emacs-lisp'],
         ['My programming languages this year: Mostly: Python, Bash, JavaScript, ' +
          'AS3, SQL, PHP. Some C++, C#, GLSL, Lua & Java #code2011', 11, 'actionscript'],
       ].each do |tweet, count, sample|
-
-        puts TweetParser.new(tweet).text
-
         result = TweetParser.parse(tweet)
         result.count.must_equal count
         result.must_include sample
