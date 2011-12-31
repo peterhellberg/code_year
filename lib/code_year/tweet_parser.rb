@@ -14,10 +14,13 @@ module CodeYear
               downcase.
               gsub('js', 'javascript').
               gsub('obj-c', 'objective-c').
+              gsub('objectivec', 'objective-c').
               gsub(/#code\d{4}|and|more|less|some|&|\)|\(|\:/, '').
               gsub(/dabbled|a bit of/, '').
               gsub(/,|\/|\./, ' ').
               gsub(' pl sql', ' pl/sql').
+              gsub(' pure data', ' pd').
+              gsub(' emacs lisp', ' emacs-lisp').
               gsub(/\s+/, ' ').
               strip
     end
