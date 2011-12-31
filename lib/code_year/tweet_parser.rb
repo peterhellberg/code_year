@@ -12,6 +12,7 @@ module CodeYear
       @original_text = text
       @text = text.
               downcase.
+              gsub('as3', 'actionscript').
               gsub('js', 'javascript').
               gsub('golang', 'go').
               gsub(/obj-c|objectivec/, 'objective-c').

@@ -42,7 +42,9 @@ describe TweetParser do
         ['Ruby, Python, Javascript, Coffeescript, Processing, PostScript, ' +
          'Lua, BASH, Haskell, C#, VBScript, Clojure,  Boo, and PHP #code2011', 13, 'boo'],
         ['I suppose I could add elisp (thank you Emacs) and bash ' +
-         '#code2011 + played with the "seven languages"', 2, 'emacs-lisp']
+         '#code2011 + played with the "seven languages"', 2, 'emacs-lisp'],
+        ['My programming languages this year: Mostly: Python, Bash, JavaScript, ' +
+         'AS3, SQL, PHP. Some C++, C#, GLSL, Lua & Java #code2011', 11, 'actionscript'],
       ].each do |tweet, count, sample|
 
         puts TweetParser.new(tweet).text

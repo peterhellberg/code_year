@@ -17,6 +17,7 @@ module CodeYear
     'emacs-lisp',
     'erlang',
     'f#',
+    'glsl',
     'go',
     'groovy',
     'haskell',
