@@ -2,7 +2,7 @@ require_relative 'languages'
 
 module CodeYear
   class TweetParser
-    attr_reader :text
+    attr_reader :original_text, :text
 
     def self.parse(text)
       new(text).parse
@@ -13,14 +13,17 @@ module CodeYear
       @text = text.
               downcase.
               gsub('js', 'javascript').
-              gsub('obj-c', 'objective-c').
-              gsub('objectivec', 'objective-c').
-              gsub(/#code\d{4}|and|more|less|some|&|\)|\(|\:/, '').
-              gsub(/dabbled|a bit of/, '').
+              gsub('golang', 'go').
+              gsub(/obj-c|objectivec/, 'objective-c').
+              gsub(/#code\d{4}|and|more|less|some|&|\)|\(|\:|\/cc/, '').
+              gsub(/dabbled|a bit of|a tiny bit|this year i|wrote/, '').
+              gsub(/mainly/, '').
+              gsub(/^#/, '').
+              gsub(/\s#/, ' ').
               gsub(/,|\/|\./, ' ').
               gsub(' pl sql', ' pl/sql').
               gsub(' pure data', ' pd').
-              gsub(' emacs lisp', ' emacs-lisp').
+              gsub(/ emacs lisp| elisp/, ' emacs-lisp').
               gsub(/\s+/, ' ').
               strip
     end
