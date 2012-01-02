@@ -45,6 +45,8 @@ describe TweetParser do
          '#code2011 + played with the "seven languages"', 2, 'emacs-lisp'],
         ['My programming languages this year: Mostly: Python, Bash, JavaScript, ' +
          'AS3, SQL, PHP. Some C++, C#, GLSL, Lua & Java #code2011', 11, 'actionscript'],
+        ['@holmic: Objective-C, C, C++ ( :( ), C# ( :( ), JS, Ruby, GLSL, vvvv, ' +
+         'Quartz Composer, Haskell, clojure, Octave #code2011”', 12, 'vvvv']
       ].each do |tweet, count, sample|
         result = TweetParser.parse(tweet)
         result.count.must_equal count

@@ -41,6 +41,7 @@ module CodeYear
     'processing',
     'prolog',
     'python',
+    'quartz composer',
     'r',
     'racket',
     'ruby',
@@ -50,6 +51,7 @@ module CodeYear
     'sql',
     'vbscript',
     'vimscript',
+    'vvvv',
     'zsh',
   ]
 end
